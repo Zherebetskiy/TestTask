@@ -8,13 +8,6 @@ namespace TestTask
     {
         public static string Solution(string S, string T)
         {
-            var result = string.Empty;
-
-            if (string.Equals(S,T))
-            {
-                return "EQUAL";
-            }
-
             if (Math.Abs(S.Length - T.Length) == 1)
             {
                 for (int i = 0; i < S.Length; i++)
@@ -51,7 +44,7 @@ namespace TestTask
                 }
             }
 
-            return "IMPOSSIBLE";
+            return string.Equals(S, T) ? "EQUAL" : "IMPOSSIBLE";
         }
     }
 }
